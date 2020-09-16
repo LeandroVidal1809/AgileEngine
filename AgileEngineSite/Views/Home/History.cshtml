@@ -1,0 +1,34 @@
+﻿@model List<AgileEngineSite.TransactionResponse>
+@{ViewData["Title"] = "History Page"; }
+
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<div style="margin-bottom:1%;text-align:right !important">
+    <span class="badge badge-pill badge-primary">Your Balance : $ @Model.Sum(x => x.AmountSum)</span>
+</div>
+<!------ Include the above in your HEAD tag ---------->
+<div id="accordion">
+
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#@string.Format("collapse{0}",item.Id)" aria-expanded="true" aria-controls="collapseOne">
+                         @item.Type.ToString() - $ @item.Amount
+                    </button>
+                </h5>
+            </div>
+
+            <div id= @string.Format("collapse{0}",item.Id) class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    The transaction was generated :  @item.DateTime  
+                </div>
+            </div>
+        </div>
+    }
+
+
+</div>

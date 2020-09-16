@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Generate Page";
+}
+
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Money accounting system</legend>
+
+        <!-- Prepended text-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="ammount">Ammount</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input id="ammount" name="ammount" class="form-control" placeholder="" type="text" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="type">Type</label>
+            <div class="col-md-2">
+                <select id="type" name="type" class="form-control">
+                    <option value="0">Select</option>
+                    <option value="1">↑ Credit </option>
+                    <option value="2">↓ Debit </option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Button (Double) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="btnGenerate"></label>
+            <div class="col-md-8">
+                <button id="btnGenerate" name="btnGenerate" onclick="GenerateTransaction()" class="btn btn-primary">Generate!</button>
+                <h5 style="color:green;display: none" id="msgOk"> Transaction Generated </h5>
+                <h5 style="color:red;display: none" id="msgBad"> Transaction Failed</h5>
+            </div>
+        </div>
+  
+
+    </fieldset>
+</form>
