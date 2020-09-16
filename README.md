@@ -1,5 +1,5 @@
 # AgileEngine
 
-Este proyecto contiene una api AgileEngineApi la cual contiene 2 metodos httpget y un metodo httppost. 
-Esta api guarda datos en memoria al ser utilizada. Por otra parte tenemos un sitio web el cual actua como interfaz de dicha api. 
-Desde la pestaña "Generate" podremos generar una nueva transacción y desde la pestaña "History" podremos obsevar el balance del usuario. 
+This project contains an AgileEngineApi api which contains 2 httpget methods and an httppost method. 
+This api saves data in memory when used. On the other hand we have a website which acts as an interface for said api.
+From the "Generate" tab we will be able to generate a new transaction and from the "History" tab we will be able to observe the user's balance.
